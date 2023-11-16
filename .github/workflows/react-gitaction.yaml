@@ -15,8 +15,8 @@ jobs:
       - name: AWS IAM 사용자 설정
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: AKIATA2ZCMWWADHSCHE7
-          aws-secret-access-key: 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
+          aws-access-key-id: ${AWS_ACCESS_KEY_ID}
+          aws-secret-access-key: ${AWS_SECRET_ACCESS_KEY}
           aws-region: ap-northeast-2
       
       - name: 리액트 빌드
@@ -27,5 +27,5 @@ jobs:
       - name: S3에 업로드
         run: aws s3 sync build/ s3://vod-recommendation-frontend --acl public-read
         env:
-            AWS_ACCESS_KEY_ID: AKIATA2ZCMWWADHSCHE7
-            AWS_SECRET_ACCESS_KEY: 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
+            AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+            AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
