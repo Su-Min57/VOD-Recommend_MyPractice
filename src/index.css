@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* App을 쓴 mainpage 화면상에서 맨 앞줄을 한칸 띄움 */
+.App {
+  padding: 20px;
+}
